@@ -26,3 +26,11 @@ jobs:
     - name: Execute Jupyter Notebook
       run: |
         jupyter nbconvert --to notebook --execute --inplace "5mins_phase3_feeder_tracker.ipynb"
+
+    - name: Run Kite API Script
+      env:
+        KITE_API_KEY: ${{ secrets.KITE_API_KEY }}
+        KITE_API_SECRET: ${{ secrets.KITE_API_SECRET }}
+        KITE_ACCESS_TOKEN: ${{ secrets.KITE_ACCESS_TOKEN }}
+      run: |
+        python initialize_kite.py
