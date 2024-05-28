@@ -25,4 +25,4 @@ jobs:
 
     - name: Execute Jupyter Notebook
       run: |
-        jupyter nbconvert --to notebook --execute _5mins_phase3_feeder&tracker.ipynb
+        jupyter nbconvert --to notebook --execute --inplace _5mins_phase3_feeder&tracker.ipynb
