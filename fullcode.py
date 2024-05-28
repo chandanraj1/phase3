@@ -1,3 +1,4 @@
+!pip install kiteconnect gspread oauth2client --quiet
 import time
 import os
 from kiteconnect import KiteConnect
